@@ -40,3 +40,11 @@ This tool is designed for:
    ```bash
    git clone https://github.com/devkumar-swipe/gitfinder.git
    cd gitfinder
+
+2.Run the tool:
+   ```bash
+python gitfinder.py
+```
+3. Enter the target URL when prompted:
+     ```bash
+   Enter the target URL (e.g., http://example.com): http://example.com
