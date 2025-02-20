@@ -46,6 +46,10 @@ CSecurity Researchers**: To identify misconfigured web servers that expose `.git
    ```bash
    pip install -r requirements.txt
 
+3. Activate your virtual environment 
+   ```bash
+   source ./<your_env_name>/bin/activate
+
 3. Run the tool
    ```bash
    python gitfinder.py -h
