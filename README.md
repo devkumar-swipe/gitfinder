@@ -48,7 +48,7 @@ CSecurity Researchers**: To identify misconfigured web servers that expose `.git
 
 3. Run the tool
    ```bash
-   python git_exposure_scanner.py
+   python gitfinder.py -h
    ```
 4. Enter the target URL when prompted:
      ```bash
@@ -60,28 +60,28 @@ CSecurity Researchers**: To identify misconfigured web servers that expose `.git
 ### Usage
 Basic Command
 ```bash
-python git_exposure_scanner.py http://example.com
+python gitfinder.py http://example.com
 ```
 
 ## Advanced Options
 Save results to a file:
 ```bash
-python git_exposure_scanner.py http://example.com -o results.json
+python gitfinder.py http://example.com -o results.json
 ```
 
 ## Set delay between requests (in seconds):
 ```bash
-python git_exposure_scanner.py http://example.com -d 2
+python gitfinder.py http://example.com -d 2
 
 ```
 ## Set number of concurrent workers:
 ```bash
-python git_exposure_scanner.py http://example.com -w 20
+python gitfinder.py http://example.com -w 20
 ```
 
 ## Combine options:
 ```bash
-python git_exposure_scanner.py http://example.com -o results.json -d 1 -w 15
+python gitfinder.py http://example.com -o results.json -d 1 -w 15
 ```
 
 ### Command-Line Arguments
