@@ -86,3 +86,15 @@ python git_exposure_scanner.py http://example.com -o results.json -d 1 -w 15
 <br>-o, --output	Save results to a file (e.g., results.json).
 <br>-d, --delay	Delay between requests in seconds (default: 1).
 <br>-w, --workers	Number of concurrent workers (default: 10).
+
+
+
+
+---
+
+### **How to Use**
+1. Clone the repository.
+2. Install dependencies using `pip install -r requirements.txt`.
+3. Run the script as described in the `README.md` file.
+
+This setup ensures your project is well-documented, easy to install, and ready for collaboration!
