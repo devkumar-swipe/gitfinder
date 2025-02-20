@@ -48,7 +48,7 @@ CSecurity Researchers**: To identify misconfigured web servers that expose `.git
 
 3. Run the tool
    ```bash
-   python gitfinder.py
+   python git_exposure_scanner.py
    ```
 4. Enter the target URL when prompted:
      ```bash
