@@ -1,17 +1,18 @@
 # Git Repository Exposure Scanner
 
-A Python-based tool to detect exposed `.git` directories and files on a target website. This tool helps identify misconfigured web servers that expose sensitive `.git` repositories, which can lead to information leakage.
+A Python tool to scan websites for exposed `.git` directories and files. This tool helps identify potential security risks by checking for publicly accessible `.git` files, which can leak sensitive information such as source code, configuration, and branch details.
 
 ---
 
 ## Features
-- Scans for exposed `.git` files and directories (e.g., `.git/HEAD`, `.git/config`).
-- Extracts branch names from `.git/HEAD`.
-- Detects exposed Git configurations.
-- Simple and easy-to-use command-line interface.
+- **Concurrent Scanning**: Uses multi-threading to speed up the scanning process.
+- **Regex Matching**: Extracts useful information like branch names and Git configurations.
+- **Randomized User-Agent**: Avoids detection by rotating `User-Agent` headers.
+- **Progress Bar**: Displays real-time progress during the scan.
+- **Output Options**: Saves results to a JSON file for further analysis.
+- **Configurable**: Allows customization of delay, workers, and output file via command-line arguments.
 
 ---
-
 ## Author Information
 - **Author**: Ved Kumar
 - **Email**: devkumarmahto204@outlook.com
@@ -22,7 +23,7 @@ A Python-based tool to detect exposed `.git` directories and files on a target w
 
 ## Uses of This Tool
 This tool is designed for:
-- **Security Researchers**: To identify misconfigured web servers that expose `.git` repositories.
+CSecurity Researchers**: To identify misconfigured web servers that expose `.git` repositories.
 - **Developers**: To check if their websites accidentally expose `.git` directories.
 - **Penetration Testers**: To include in their reconnaissance phase for identifying potential information leaks.
 - **Bug Bounty Hunters**: To find vulnerabilities related to exposed `.git` repositories.
@@ -41,10 +42,47 @@ This tool is designed for:
    git clone https://github.com/devkumar-swipe/gitfinder.git
    cd gitfinder
 
-2.Run the tool:
+2.Run the tool
    ```bash
 python gitfinder.py
 ```
 3. Enter the target URL when prompted:
      ```bash
    Enter the target URL (e.g., http://example.com): http://example.com
+
+
+
+
+### Usage
+Basic Command
+```bash
+python git_exposure_scanner.py http://example.com
+
+
+Advanced Options
+Save results to a file:
+```bash
+python git_exposure_scanner.py http://example.com -o results.json
+```
+
+## Set delay between requests (in seconds):
+```bash
+python git_exposure_scanner.py http://example.com -d 2
+
+```
+## Set number of concurrent workers:
+```bash
+python git_exposure_scanner.py http://example.com -w 20
+```
+
+## Combine options:
+```bash
+python git_exposure_scanner.py http://example.com -o results.json -d 1 -w 15
+```
+
+### Command-Line Arguments
+- **Argument	Description**
+url	Target URL to scan (e.g., http://example.com).
+-o, --output	Save results to a file (e.g., results.json).
+-d, --delay	Delay between requests in seconds (default: 1).
+-w, --workers	Number of concurrent workers (default: 10).
