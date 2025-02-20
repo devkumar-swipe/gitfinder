@@ -42,11 +42,15 @@ CSecurity Researchers**: To identify misconfigured web servers that expose `.git
    git clone https://github.com/devkumar-swipe/gitfinder.git
    cd gitfinder
 
-2. Run the tool
+2. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+3. Run the tool
    ```bash
    python gitfinder.py
    ```
-3. Enter the target URL when prompted:
+4. Enter the target URL when prompted:
      ```bash
    Enter the target URL (e.g., http://example.com): http://example.com
    
