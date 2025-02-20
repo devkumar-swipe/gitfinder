@@ -57,9 +57,9 @@ python gitfinder.py
 Basic Command
 ```bash
 python git_exposure_scanner.py http://example.com
+```
 
-
-Advanced Options
+## Advanced Options
 Save results to a file:
 ```bash
 python git_exposure_scanner.py http://example.com -o results.json
@@ -82,7 +82,7 @@ python git_exposure_scanner.py http://example.com -o results.json -d 1 -w 15
 
 ### Command-Line Arguments
 - **Argument	Description**
-url	Target URL to scan (e.g., http://example.com).
--o, --output	Save results to a file (e.g., results.json).
--d, --delay	Delay between requests in seconds (default: 1).
--w, --workers	Number of concurrent workers (default: 10).
+<br>url	Target URL to scan (e.g., http://example.com).
+<br>-o, --output	Save results to a file (e.g., results.json).
+<br>-d, --delay	Delay between requests in seconds (default: 1).
+<br>-w, --workers	Number of concurrent workers (default: 10).
